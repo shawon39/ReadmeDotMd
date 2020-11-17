@@ -44,7 +44,7 @@ In here, we will talk about Firestore only.
 ```
 
 ```HTML
-// At the end of body tag
+<!-- Immediate above of closing body tag -->
 <script>
     var firebaseConfig = {
       apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
