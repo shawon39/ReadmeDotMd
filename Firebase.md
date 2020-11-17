@@ -43,7 +43,7 @@ In here, we will talk about Firestore only.
 <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
 ```
 
-```Javascript
+```HTML
 // At the end of body tag
 <script>
     var firebaseConfig = {
@@ -66,15 +66,16 @@ In here, we will talk about Firestore only.
 This is the picture of my sample database
 
 ![Cafe Database](Images/Firebase/database-cafe.PNG)
+<br/><br/>
 
-1. Fetching data
+**1. Fetching data**
 
 ```Javascript
 db.collection("cafes").where("city", "==", "Dhaka").orderBy("name").get()
-	.then((snapshot) => {
-		snapshot.docs.forEach((doc) => {
-			console.log(doc);
-		});
+  .then((snapshot) => {
+    snapshot.docs.forEach((doc) => {
+      console.log(doc);
+    });
   });
 
 // The following way is for realtime
@@ -92,7 +93,7 @@ db.collection("cafes").orderBy("city").onSnapshot((snapshot) => {
 });
 ```
 
-2. Saving data
+**2. Saving data**
 ```Javascript
   db.collection("cafes").add({
     name: "Dark cafe dhanmondi",
@@ -100,7 +101,7 @@ db.collection("cafes").orderBy("city").onSnapshot((snapshot) => {
   });
 ```
 
-3. Updating data
+**3. Updating data**
 
 ```Javascript
   // id = the collection we want to update
@@ -112,7 +113,7 @@ db.collection("cafes").orderBy("city").onSnapshot((snapshot) => {
 // There is another method called set which override the rest of the property. we can use set/update depends on situation.
 ```
 
-4. Delete data
+**4. Delete data**
 ```Javascript
   // id = the collection we want to delete
   db.collection("cafes").doc(id).delete();
