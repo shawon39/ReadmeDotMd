@@ -1,4 +1,4 @@
-In this section we gonna talk about Firebase for Web. let's dive into it.
+In this section we're gonna talk about Firebase for Web. let's dive into it.
 
 - [What is Firebase?](#what-is-firebase)
 - [Database](#database)
@@ -35,7 +35,7 @@ In here, we will talk about Firestore only.
 
 **Step 2** : Create database in the firestore. This is noSQL database.
 
-**Step 3** : Add firebase connect scrip in your local project.
+**Step 3** : Add firebase connect script in your local project.
 
 ```html
 <!-- In the head -->
@@ -44,7 +44,7 @@ In here, we will talk about Firestore only.
 ```
 
 ```HTML
-// At the end of body tag
+<!-- Immediate above of closing body tag -->
 <script>
     var firebaseConfig = {
       apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
